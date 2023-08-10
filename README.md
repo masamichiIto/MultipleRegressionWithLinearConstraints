@@ -6,6 +6,14 @@ Multiple Regression(MR) is used to express linear relationships between dependen
 $$\begin{align*}&y = X\beta + e\\
 &where \space e\sim N(0_p, \sigma^2I_p)\end{align*}$$
 
+```math
+\begin{align*}
+&y = X\beta + e\\
+&where \space e\sim N(0_p, \sigma^2I_p)
+\end{align*}
+```
+
+
 ## 2. MR with Linear Constraints
 ### 2-1. Model
 ### 2-2. Estimation
