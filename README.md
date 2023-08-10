@@ -5,6 +5,7 @@ Python script for the implementation for multiple regression with linear constra
 Multiple Regression(MR) is used to express linear relationships between dependent variable and independent variables. Let $y$ be a $n\times 1$ dependent vector(target), $X$ be a $n\times p$ matrix(independent variables), $\beta$ be a $p\times 1$ coefficient vector, then MR model is expressed as follows.
 $$\begin{align*}&y = X\beta + e\\
 &where \space e\sim N(0_p, \sigma^2I_p)\end{align*}$$
+
 ```math
 \begin{align*}
 &y = X\beta + e\\
