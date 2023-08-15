@@ -24,7 +24,7 @@ $$
 $$
 ```math
 \begin{align*}
-\underset{\beta}{\argmin}\space &\|e\|^2 = \|y-X\beta\|^2 (=:f(\beta))\\
+\underset{\beta}{argmin}\space &\|e\|^2 = \|y-X\beta\|^2 (=:f(\beta))\\
 &where\space \|x\| := x^T x = \sum_{i}x_i^2
 \end{align*}
 ```
@@ -47,9 +47,29 @@ Assuming that $X^TX$ is full rank, the least-squares estimator is as follows.
 \hat{\beta}_{LS} = (X^TX)^{-1}X^Ty
 ```
 
-
-
 #### b. Maximum Likelihood Method
+Setting $e := y-Xbeta$, since $E[e]=0_p, V[e]=\sigma^2 I_p$ from the assumption, the log likelihood $l(\beta)$ is defined as follows.
+
+$$
+\begin{align*}
+l(\beta) &= \log \prod_{i=1}^nf(e_i|\beta) = \sum_{i=1}^n\log f(e_i|\beta)\\
+&= \log \left(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}(y-X\beta)^T(\sigma^2 I_p)^{-1}(y-X\beta)\right)\right)\\
+&= \log\left(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)\right)\right)\\
+&= \left(-\frac{1}{2}\log2\pi\sigma^2 -\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)\right)\\
+&\propto -\|y-X\beta\|^2 = -f(\beta)
+\end{align*}
+$$
+
+```math
+\begin{align*}
+l(\beta) &= \log \prod_{i=1}^nf(e_i|\beta) = \sum_{i=1}^n\log f(e_i|\beta)\\
+&= \log \left(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}(y-X\beta)^T(\sigma^2 I_p)^{-1}(y-X\beta)\right)\right)\\
+&= \log\left(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)\right)\right)\\
+&= \left(-\frac{1}{2}\log2\pi\sigma^2 -\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)\right)\\
+&\propto -\|y-X\beta\|^2 = -f(\beta)
+\end{align*}
+```
+Since ML estimator is obtained as maximizer of $l(\beta)$, ML estimator is equivalent LS estimator in this setting, i.e. $\beta_{ML} = \beta_{LS} = (X^TX)^{-1}X^Ty$ .  
 
 ## 2. MR with Linear Constraints
 ### 2-1. Model
