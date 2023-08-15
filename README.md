@@ -47,7 +47,7 @@ l(\beta) &= \log \prod_{i=1}^nf(e_i|\beta) = \sum_{i=1}^n\log f(e_i|\beta)\\
 &\propto -\|y-X\beta\|^2 = -f(\beta)
 \end{align*}
 ```
-Since ML estimator is obtained as maximizer of $l(\beta)$, ML estimator is equivalent LS estimator in this setting, i.e. $\beta_{ML} = \beta_{LS} = (X^TX)^{-1}X^Ty$ .  
+Since ML estimator is obtained as maximizer of $l(\beta)$, ML estimator is equivalent to LS estimator in this setting, i.e. $\beta_{ML} = \beta_{LS} = (X^TX)^{-1}X^Ty$ .  
 
 ## 2. MR with Linear Constraints
 ### 2-1. Model
@@ -57,3 +57,7 @@ Since ML estimator is obtained as maximizer of $l(\beta)$, ML estimator is equiv
 ## 3. MR with stochastic Constraints
 ### 3-1. Model
 ### 3-2. Estimation
+
+## Reference
+- https://www.kwansei.ac.jp/s_sociology/kiyou/38/38_ch05.pdf
+    - <--(in Japanese)
