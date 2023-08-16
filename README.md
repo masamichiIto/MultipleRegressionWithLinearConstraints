@@ -55,12 +55,6 @@ In real-world analysis, it is often necessary to impose constraints on parameter
 
 In this section, MR with such a constraint will be presented. Let's denote general linear constraint as $C\beta = t$, then the optimization probelem with this constraint is defined as follows;
 
-$$
-\begin{align*}
-\underset{\beta}{argmin}\space &\|e\|^2 = \|y-X\beta\|^2 (=:f(\beta))\\
-&subject\space to\space C\beta = t
-\end{align*}
-$$
 ```math
 \begin{align*}
 \underset{\beta}{argmin}\space &\|e\|^2 = \|y-X\beta\|^2 (=:f(\beta))\\
@@ -69,9 +63,6 @@ $$
 ``` 
 ### 2-2. Estimation
 Lagrange multiplier methods can be used in this setting in order to obtain estimator of the above constraind problem. Let $\lambda$ be a $p\times 1$ Lagrange multiplier vector, then objective function $g(\beta)$ to be minimized is defined as follows;
-$$
-g(\beta) := \|y-X\beta\|^2 + \lambda^T(C\beta - t)
-$$
 ```math
 g(\beta) := \|y-X\beta\|^2 + \lambda^T(C\beta - t)
 ```
@@ -101,7 +92,7 @@ From the above, the estimator of the coefficient vector $\beta$ with linear cons
 \hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
 ```
 
-## 3. MR with Stochastic Constraints
+## 3. (Under Construction) MR with Stochastic Constraints
 ### 3-1. Model
 ### 3-2. Estimation
 
