@@ -81,8 +81,8 @@ Since $g(\beta)$ is also convex with respect to $\beta$, the solution of the equ
 ```math
 \begin{align*}
 \frac{\partial g(\beta)}{\partial \beta} &= -2X^Ty + 2X^TX\beta + C^T\lambda = 0\\
-\Leftrightarrow & \hat{\beta} = (X^TX)^{-1}X^Ty -\frac{1}{2}(X^TX)^{-1}C^T\lambda\\
-&\hat{\beta} = \hat{\beta}_{LS}-\frac{1}{2}(X^TX)^{-1}C^T\lambda
+\Leftrightarrow \space \hat{\beta} &= (X^TX)^{-1}X^Ty -\frac{1}{2}(X^TX)^{-1}C^T\lambda\\
+&= \hat{\beta}_{LS}-\frac{1}{2}(X^TX)^{-1}C^T\lambda
 \end{align*}
 ```
 
