@@ -88,10 +88,6 @@ Since $g(\beta)$ is also convex with respect to $\beta$, the solution of the equ
 
 Here, since $\hat{\beta}$ should satisfy the constraint $C\beta = t$, we obtain the following formula for $\lambda$ by premultiplying both sides of the equation of $\hat{\beta}$ by $C$.
 
-$$
-t = C\hat{\beta} = C\hat{\beta}_{LS}-\frac{1}{2}C(X^TX)^{-1}C^T\lambda
-$$
-
 ```math
 \begin{align*}
 t &= C\hat{\beta} = C\hat{\beta}_{LS}-\frac{1}{2}C(X^TX)^{-1}C^T\lambda\\
@@ -100,10 +96,6 @@ t &= C\hat{\beta} = C\hat{\beta}_{LS}-\frac{1}{2}C(X^TX)^{-1}C^T\lambda\\
 ```
 
 From the above, the estimator of the coefficient vector $\beta$ with linear constraint $C\beta = t$ is as follows.
-
-$$
-\hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
-$$
 
 ```math
 \hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
