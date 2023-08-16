@@ -78,18 +78,33 @@ g(\beta) := \|y-X\beta\|^2 + \lambda^T(C\beta - t)
 
 Since $g(\beta)$ is also convex with respect to $\beta$, the solution of the equation with the partial derivative of $g(\beta)$ with respect to $\beta$ set to zero is the solution to this constrained optimization problem.
 
-$$
+```math
 \begin{align*}
-\frac{\partial g(\beta)}{\partial \beta} = -2X^Ty + X^TX\beta + C^T\lambda = 0
+\frac{\partial g(\beta)}{\partial \beta} &= -2X^Ty + X^TX\beta + C^T\lambda = 0\\
+\Leftrightarrow & \hat{\beta} = (X^TX)^{-1}X^Ty -\frac{1}{2}(X^TX)^{-1}C^T\lambda\\
+&\hat{\beta} = \hat{\beta}_{LS}-\frac{1}{2}(X^TX)^{-1}C^T\lambda
 \end{align*}
+```
+
+Here, since $\hat{\beta}$ should satisfy the constraint $C\beta = t$, we obtain the following formula for $\lambda$ by premultiplying both sides of the equation of $\hat{\beta}$ by $C$.
+
+$$
+t = C\hat{\beta} = C\hat{\beta}_{LS}-\frac{1}{2}C(X^TX)^{-1}C^T\lambda
 $$
 
 ```math
 \begin{align*}
-\frac{\partial g(\beta)}{\partial \beta} &= -2X^Ty + X^TX\beta + C^T\lambda = 0\\
-\Leftrightarrow & \hat{\beta} = (X^TX)^{-1}X^Ty -\frac{1}{2}C^T\lambda
+t &= C\hat{\beta} = C\hat{\beta}_{LS}-\frac{1}{2}C(X^TX)^{-1}C^T\lambda\\
+\Leftrightarrow & \lambda = 2\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)\\
 \end{align*}
 ```
+
+From the above, the estimator of the coefficient vector $\beta$ with linear constraint $C\beta = t$ is as follows.
+
+$$
+\hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
+$$
+
 
 ## 3. MR with Stochastic Constraints
 ### 3-1. Model
