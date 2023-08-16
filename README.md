@@ -105,6 +105,9 @@ $$
 \hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
 $$
 
+```math
+\hat{\beta}_{lc} = \hat{\beta}_{LS}-(X^TX)^{-1}C^T\left\{C(X^TX)^{-1}C^T\right\}^{-1}(C\hat{\beta} - t)
+```
 
 ## 3. MR with Stochastic Constraints
 ### 3-1. Model
