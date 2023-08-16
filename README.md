@@ -1,4 +1,4 @@
-# MultipleRegressionWithLinearConstraints
+# Multiple Regression Analysis With Linear Constraints
 Python script for the implementation for multiple regression with linear constraints will be developed.
 
 ## 1. Preliminaries - Multiple Regression -
